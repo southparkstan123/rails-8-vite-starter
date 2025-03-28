@@ -1,17 +1,29 @@
 services:
-  web:
+  app:
     build:
       context: .
       dockerfile: Dockerfile.dev
     environment:
       - RAILS_ENV=${RAILS_ENV}
       - HOST_NAME=${HOST_NAME}
-    command: bash -c "bin/dev"
+    # command: bash -c "bin/dev"
     tty: true
     volumes:
       - .:/rails-8-vite-starter
     ports:
       - "3100:3000"
+  # vite:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   entrypoint: ./docker-vite.sh
+  #   depends_on:
+  #     - rails
+  #   command: bash -c "./bin/dev"
+  #   volumes:
+  #     - .:/rails-8-vite-starter
+  #   ports:
+  #     - "3036:3037"
 networks:
   default:
     name: rails-8-vite-starter_default

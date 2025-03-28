@@ -24,7 +24,7 @@ RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
-COPY package.json ./
+COPY package.json package-lock.json ./
 RUN npm install
 
 # Copy application code
