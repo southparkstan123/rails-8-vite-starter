@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+# Inertia replaces your application's view layer. The views returned by your application are JavaScript page components. [https://inertiajs.com]
+gem "inertia_rails"
+
+gem "vite_rails"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
