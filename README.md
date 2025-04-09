@@ -1,8 +1,8 @@
-# Rails 8 Starter
+# Rails 8 Vite Starter
 
 ## Introduction
 
-This repository is project starter using Ruby on Rails 8.
+This repository is project starter using Vite Ruby(include Ruby on Rails 8) with Vue 3 and InertiaJS for frontend.
 
 ## Features
 TBC
@@ -18,6 +18,16 @@ TBC
 #### Rails
 
 **Rails 8.0.2** is used on this repo
+
+### Frontend
+
+#### Javascript Framework
+
+**Vue 3.5.13** is used on this repo
+
+#### CSS Framework
+
+**TailwindCSS 4.0.17** is used on this repo
 
 ## Setup the environment on Docker
 
