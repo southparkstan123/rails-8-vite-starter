@@ -42,7 +42,7 @@ You can add the .env files to store the configuration value for different enviro
 docker-compose up --build 
 ```
 
-4. Wait a moment and access ```http://localhost:3000``` on Web browser.
+4. Wait a moment and access ```http://localhost:3000``` on app browser.
 
 ### (Optional) Edit your host name
 1. For example, if you want using ```http://rails-8-playground.test``` as the customized host in your computer, modify the following configuration ```.env``` file as follow:
@@ -57,6 +57,51 @@ HOST_NAME=rails-8-playground.test
 
 4. Restart the container by ```docker-compose down && docker-compose up -d```
 
-5. Access ```http://rails-8-playground.test``` by web browser.
+5. Access ```http://rails-8-playground.test``` by app browser.
+
+## Useful commands after establish the environment:
+
+1. Run the following command to start the app:
+```bash
+# depends on .env by default
+docker-compose up
+```
+
+or specify an env file for several environment such as ```.env.development.local```.
+
+```bash
+# depends on .env.development.local
+docker-compose --env-file ./.env.development.local up
+```
+
+2. Run the following command to restart the app:
+```bash
+docker-compose restart
+```
+
+3. Run the following command to shutdown the app:
+```bash
+docker-compose down
+```
+
+4. Run the following command to clean up old unused builds to keep my system clean:
+```bash
+docker system prune --all
+```
+
+5. Run the following command to install dependencies for frontend
+```bash
+npm install 
+```
+
+6. Run the following command to build frontend bundles:
+```bash
+bin/vite build
+```
+
+7. Run the following command to start the frontend development mode (HMR enable):
+```bash
+bin/dev
+```
 
 Happy Coding !!!!!!
