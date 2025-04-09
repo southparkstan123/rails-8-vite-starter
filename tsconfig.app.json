@@ -5,6 +5,9 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./app/javascript/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -20,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["app/javascript/**/*.ts", "app/javascript/**/*.tsx", "app/javascript/**/*.vue"]
+  "include": ["env.d.ts", "app/javascript/**/*.vue", "app/javascript/**/*.ts", "app/javascript/**/*.tsx", "app/javascript/**/*.d.ts"],
 }
