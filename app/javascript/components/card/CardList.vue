@@ -4,7 +4,7 @@
       <TransitionGroup name="list" tag="div" :class="wrapperClass">
         <div
           v-for="(item, index) in data"
-          :key="item[key as keyof T] as string | number | symbol"
+          :key="String(item[key as keyof T])"
         >
           <slot v-bind="{ item, index }"></slot>
         </div>
