@@ -104,14 +104,18 @@ docker system prune --all
 npm install 
 ```
 
-6. Run the following command to build frontend bundles:
+6. Run the following command to build frontend bundles and rebuild the app by:
 ```bash
-bin/vite build
+docker-compose down && bin/vite build && docker-compose up --build
 ```
 
-7. Run the following command to start the frontend development mode (HMR enable):
+then refresh the browser.
+
+7. Run the following command to start the app with development mode (HMR enable):
 ```bash
 bin/dev
 ```
+
+then refresh the browser.
 
 Happy Coding !!!!!!
