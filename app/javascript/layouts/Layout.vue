@@ -2,9 +2,9 @@
   <main>
     <MyVueNavBar :backgroundClass="'bg-slate-300'" :breakpoint="768">
       <template #body-content>
-        <Link href="/">Home</Link>
-        <Link href="/inertia-example">Example</Link>
-        <Link href="/testing">Testing</Link>
+        <Link href="/" :class="{ 'block md:inline text-red-300 cursor-not-allowed': $page.url === '/' }">Home</Link>
+        <Link href="/inertia-example" :class="{ 'block md:inline text-red-300 cursor-not-allowed': $page.url === '/inertia-example' }">Example</Link>
+        <Link href="/testing" :class="{ 'block md:inline text-red-300 cursor-not-allowed': $page.url === '/testing' }">Testing</Link>
       </template>
     </MyVueNavBar>
     <article class="py-4">
